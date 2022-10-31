@@ -5,7 +5,12 @@
 `infinite scrolling to fetch data part by part for the sake of User Experience`
 
 
+` uploads / images folder`
+
+Create folder with name "uploads" in backend folder and then further create folder named "images" in that "uploads" folder. This is where all images are saved for static serving to database".
+
 `npm install`
+
 do npm install one by one in frontend and backend folders to install dependencies
 
 ` .env`

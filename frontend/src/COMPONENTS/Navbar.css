@@ -1,0 +1,22 @@
+.navbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 10px auto;
+
+
+}
+
+.navbar a
+{
+    text-decoration: none;
+    color: darkgray;
+}
+
+.navbar a.active
+{
+    color: black;
+    border-bottom: 1px solid black;
+}

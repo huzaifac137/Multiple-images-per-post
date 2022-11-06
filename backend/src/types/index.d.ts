@@ -11,6 +11,6 @@ declare global {
 declare global {
     interface Error {
         code: number;
+        message: string;
     }
-
 }

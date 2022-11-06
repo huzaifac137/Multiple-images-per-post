@@ -36,7 +36,7 @@ app.use((err, req, res, next) => {
         return next(err);
     }
     // console.log("ERROR CODE : " + err.code);
-    res.status(500);
+    res.status(err.code || 500);
     res.json({ message: err.message || "SOMETHING WENT WRONG" });
 });
 const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {

@@ -2,12 +2,15 @@
 
 `Includes swipe to see other images in one post just like in any E - commerce app`
 
-`infinite scrolling to fetch data part by part for the sake of User Experience`
+`infinite scrolling to fetch data part by part for the sake of User Experience` 
+
+
+`dist folder contains transpiled code from Typescript to Javascript  and src folder contains Typescript files`
 
 
 ` uploads / images folder`
 
-Create folder with name "uploads" in backend folder and then further create folder named "images" in that "uploads" folder. This is where all images are saved for static serving to database".
+Create folder with name "uploads" in dist folder and then further create folder named "images" in that "uploads" folder. This is where all images are saved for static serving to database".
 
 `npm install`
 

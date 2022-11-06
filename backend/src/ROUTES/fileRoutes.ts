@@ -4,7 +4,7 @@ const postpics = require("../CONTROLLERS/fileControllers").postPics;
 const fileUploader = require("../UPLOADER/multer");
 const getpics = require("../CONTROLLERS/fileControllers").getPics;
 
+
 router.get("/", getpics);
 router.post("/upload", fileUploader.array("files"), postpics);
-
-module.exports = router;
+module.exports = router; 

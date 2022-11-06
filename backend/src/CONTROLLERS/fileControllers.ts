@@ -22,10 +22,13 @@ const postPics: RequestHandler = async (req, res, next) => {
    }
 
    catch (err) {
-      const error = new Error("SOMETHING WENT WRONG , CANT SAVE FILES");
-      error.code = 500;
-      console.log("ERROR IN UPLOAD : " + err);
-      return next(error);
+      if (err instanceof Error) {
+         const error = new Error("SOMETHING WENT WRONG , CANT SAVE FILES");
+
+         err.code = 500;
+         console.log("ERROR IN UPLOAD : " + err);
+         return next(error);
+      }
 
    }
 
@@ -57,3 +60,4 @@ const getPics: RequestHandler = async (req, res, next) => {
 exports.getPics = getPics;
 
 exports.postPics = postPics;
+

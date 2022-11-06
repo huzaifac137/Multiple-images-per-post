@@ -24,10 +24,12 @@ const postPics = (req, res, next) => __awaiter(void 0, void 0, void 0, function*
         newImage.save();
     }
     catch (err) {
-        const error = new Error("SOMETHING WENT WRONG , CANT SAVE FILES");
-        error.code = 500;
-        console.log("ERROR IN UPLOAD : " + err);
-        return next(error);
+        if (err instanceof Error) {
+            const error = new Error("SOMETHING WENT WRONG , CANT SAVE FILES");
+            err.code = 500;
+            console.log("ERROR IN UPLOAD : " + err);
+            return next(error);
+        }
     }
     console.log(newImage.file);
     res.status(201).json({ message: "FILES UPLOADED SUCCESS" });

@@ -29,11 +29,12 @@ function Card() {
       description ="";
     }
 
+  
     return (
-      <div  style={{textAlign:"center" }}>
-        <Swiper className='previewimgContainer' spaceBetween={30} slidesPerView={1}  >
+      <div  style={{textAlign:"center" , height:"85vh"  }}>
+        <Swiper  spaceBetween={10} slidesPerView={1}  className='imageDetailsContainer'  >
           {picsPerPost?.map((pic : string)=> <SwiperSlide key={Math.random() * Math.random()} > 
-            <img className='previewimg' src={`${process.env.REACT_APP_SERVER_URL}/${pic}`} alt="" />
+            <img className='imageDetailsPreviewImg' src={`${process.env.REACT_APP_SERVER_URL}/${pic}`} alt="" />
           </SwiperSlide> )}
             </Swiper>
              <h6 style={{color:"gray"}}>SWIPE FOR MORE PICS</h6>

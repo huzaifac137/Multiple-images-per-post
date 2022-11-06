@@ -89,7 +89,7 @@ function FileUploader() {
 
     return (
         <form onSubmit={handleSubmit} style={{display:"flex" , flexDirection:"column" , alignItems:"center" ,
-        width:"50%" , margin:"100px auto" , padding:"10px" , gap:"20px" }}> 
+        width:"50%" , margin:"100px auto" , padding:"10px" , gap:"20px" }} encType="multipart/form-data"> 
 
           {response ? <h3 style={{margin:"0px auto"}}>{response}</h3> : null  }
              

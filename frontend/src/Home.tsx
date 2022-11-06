@@ -86,17 +86,18 @@ function Home() {
          navigate("/details" , {state: {pics : pics , title : title , price:price , description : description }})
      };
 
+
     return (
 
         <div className='homeContainer' onScroll={handleScroll} >
-
+   
                 {isLoading===true ? <h3>Please wait.......</h3> : null}  
-                 
+                 {(isLoading===false && PRODUCTS.length===0 ) ? <h2>NO PRODUCTS FOUND!</h2>: null }
                    {PRODUCTS.map((item)=> (item) && <div className='previewimgContainer' key={item._id} 
                    onClick={()=>handleOpen(item.file , item.title , item.price , item.description)}>
 
                       <img  className="previewimg"
-                    src={`${process.env.REACT_APP_SERVER_URL}/${item?.file[0]}  `}  alt=""  />  
+                    src={`${process.env.REACT_APP_SERVER_URL}/${item?.file[0]}`}  alt=""  />  
                     <h2>{item.title}</h2>
                      <h3 style={{color:"green"}}> ${item.price}</h3>
                     </div>
